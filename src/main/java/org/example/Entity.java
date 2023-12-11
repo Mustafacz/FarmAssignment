@@ -5,7 +5,7 @@ public class Entity {
     protected static int lastCropId = 0;
     public int id;
     protected String type;
-    protected String name;
+
 
     public Entity(int id, String type) {
         this.type = type;

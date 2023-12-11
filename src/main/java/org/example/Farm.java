@@ -1,19 +1,14 @@
 package org.example;
 
-import org.example.Animal;
-import org.example.AnimalManager;
-import org.example.Crop;
-import org.example.CropManager;
 
 import java.io.*;
-import java.util.List;
 import java.util.Scanner;
 
 
 public class Farm {
-    private AnimalManager animalManager;
-    private CropManager cropManager;
-    private Scanner scanner;
+    private final AnimalManager animalManager;
+    private final CropManager cropManager;
+    private final Scanner scanner;
 
     public Farm() {
         cropManager = new CropManager();
@@ -21,10 +16,6 @@ public class Farm {
         scanner = new Scanner(System.in);
     }
 
-    public void showAvailableIds() {
-        animalManager.showAvailableIds();
-        cropManager.showAvailableIds();
-    }
 
     public void mainMenu() {
         int userChoice;

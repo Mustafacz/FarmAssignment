@@ -1,7 +1,7 @@
 package org.example;
 
 public class Crop extends Entity {
-    private String cropType;
+    private final String cropType;
     private int quantity;
 
 
@@ -33,21 +33,6 @@ public class Crop extends Entity {
     @Override
     public String getDescription() {
         return super.getDescription() + ", Crop Type: " + cropType + ", Quantity: " + quantity;
-    }
-
-    public static Crop fromCsvString(String csvString) {
-        String[] parts = csvString.split(",");
-        if (parts.length == 4 && parts[0].equals("Crop")) {
-            int id = Integer.parseInt(parts[1]);
-            String cropType = parts[2];
-            int quantity = Integer.parseInt(parts[3]);
-            return new Crop(id, cropType, quantity);
-        }
-        return null;
-    }
-
-    public String toCsvString() {
-        return String.format("Crop,%d,%s,%d", getId(), cropType, quantity);
     }
 }
 

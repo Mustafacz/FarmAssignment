@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 public class AnimalManager {
     private List<Animal> animals;
-    private CropManager cropManager;
-    private Scanner scanner;
+    private final CropManager cropManager;
+    private final Scanner scanner;
 
     public AnimalManager(CropManager cropManager) {
         animals = new ArrayList<>();
@@ -71,7 +71,6 @@ public class AnimalManager {
         String newSpecies = null;
         if (existingAnimal != null) {
             System.out.println("There is already an animal with this ID. ");
-            return;
         } else {
             System.out.println("Write the species for the new animal: ");
             String species = scanner.nextLine();
@@ -140,7 +139,5 @@ public class AnimalManager {
         return animals;
     }
 
-    public void setAnimals(List<Animal> animals) {
-        this.animals = animals;
-    }
+
 }

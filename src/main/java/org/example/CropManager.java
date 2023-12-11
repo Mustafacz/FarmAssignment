@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class CropManager {
-    private List<Crop> crops;
-    private Scanner scanner;
+    private final List<Crop> crops;
+    private final Scanner scanner;
 
     public CropManager() {
         crops = new ArrayList<>();
